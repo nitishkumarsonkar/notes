@@ -33,3 +33,7 @@ Ensure each section accurately represents the principle's core concepts
 
 
 Please implement these changes while preserving the original examples and key information.
+
+
+prompt for degsing pattern:
+lets deep dive into the builder pattern, write it's concepts and give a good example.
