@@ -37,3 +37,9 @@ Please implement these changes while preserving the original examples and key in
 
 prompt for degsing pattern:
 lets deep dive into the builder pattern, write it's concepts and give a good example.
+lets deep dive into the Factory Method pattern, write it's concepts and give a good example.
+
+VS Code has a built-in Markdown preview.
+
+ You can toggle it with Ctrl+Shift+V (or Cmd+Shift+V on macOS). While not strictly "review," it allows you to see the rendered Markdown.
+ 

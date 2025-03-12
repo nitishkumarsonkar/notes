@@ -81,6 +81,96 @@ In Spring Boot, the default scope for beans is **singleton**. This means that th
 
 While singletons are ideal for many components (like service and repository layers), Spring also supports other scopes (such as prototype, request, and session) for cases where a single instance is not appropriate.
 
+## Factory Method Pattern
+
+The Factory Method pattern is a creational design pattern that provides an interface for creating objects but lets subclasses decide which class to instantiate. It promotes loose coupling by allowing object creation without exposing the creation logic.
+
+### Key Characteristics
+- Defines an interface for creating objects
+- Lets subclasses alter the type of objects created
+- Moves object creation to subclasses
+- Promotes loose coupling
+
+### Real-World Analogy
+Think of a restaurant's kitchen. The kitchen (factory) creates different types of dishes (products) based on customer orders, but the dining area (client) doesn't need to know how each dish is prepared.
+
+### Example Implementation (Java)
+```java
+// Product interface
+interface Animal {
+    void makeSound();
+}
+
+// Concrete products
+class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Woof!");
+    }
+}
+
+class Cat implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow!");
+    }
+}
+
+// Creator interface
+abstract class AnimalFactory {
+    abstract Animal createAnimal();
+    
+    // Common operations using the factory method
+    public void playWithAnimal() {
+        Animal animal = createAnimal();
+        animal.makeSound();
+    }
+}
+
+// Concrete creators
+class DogFactory extends AnimalFactory {
+    @Override
+    Animal createAnimal() {
+        return new Dog();
+    }
+}
+
+class CatFactory extends AnimalFactory {
+    @Override
+    Animal createAnimal() {
+        return new Cat();
+    }
+}
+
+// Client code
+public class Main {
+    public static void main(String[] args) {
+        AnimalFactory dogFactory = new DogFactory();
+        dogFactory.playWithAnimal(); // Output: Woof!
+        
+        AnimalFactory catFactory = new CatFactory();
+        catFactory.playWithAnimal(); // Output: Meow!
+    }
+}
+```
+
+### Common Use Cases
+- Framework development
+- Plugin architectures
+- Customizable object creation
+- Cross-platform compatibility
+
+### Advantages
+- Decouples object creation
+- Single Responsibility Principle
+- Open/Closed Principle
+- Flexible and extensible code
+
+### Disadvantages
+- Can increase complexity
+- Requires creating many new subclasses
+- May be overkill for simple object creation
+
 ## Builder Pattern
 
 The Builder pattern is a creational design pattern that lets you construct complex objects step by step. It's particularly useful when you need to create an object with numerous possible configurations.
