@@ -1,0 +1,54 @@
+{
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "text" : "text value"
+                    }
+                ],
+                "role": "model"
+            },
+            "finishReason": "STOP",
+            "citationMetadata": {
+                "citationSources": [
+                    {
+                        "startIndex": 168,
+                        "endIndex": 295
+                    },
+                    {
+                        "startIndex": 3977,
+                        "endIndex": 4137
+                    },
+                    {
+                        "startIndex": 4144,
+                        "endIndex": 4287
+                    },
+                    {
+                        "startIndex": 4491,
+                        "endIndex": 4634
+                    }
+                ]
+            },
+            "avgLogprobs": -0.23769147660997178
+        }
+    ],
+    "usageMetadata": {
+        "promptTokenCount": 4,
+        "candidatesTokenCount": 1440,
+        "totalTokenCount": 1444,
+        "promptTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 4
+            }
+        ],
+        "candidatesTokensDetails": [
+            {
+                "modality": "TEXT",
+                "tokenCount": 1440
+            }
+        ]
+    },
+    "modelVersion": "gemini-2.0-flash"
+}
