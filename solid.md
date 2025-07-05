@@ -17,7 +17,7 @@ A class/module should have one, and only one, reason to change. This means it sh
 - Makes the system easier to understand and modify
 
 ### Bad Example - Multiple Responsibilities
-```java
+```javaz
 // This class violates SRP by handling multiple unrelated tasks
 class Employee {
     void calculatePay() { /* Salary calculation logic */ }
