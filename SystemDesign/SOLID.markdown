@@ -115,7 +115,7 @@ class GraphicEditor {
 - Design for extensibility from the start
 
 ### Real-World Analogy
-Think of a smartphone's app store: The phone's operating system is closed for modification but open for extension through new apps. You don't need to modify the OS to add new functionality.
+    Think of a smartphone's app store: The phone's operating system is closed for modification but open for extension through new apps. You don't need to modify the OS to add new functionality.
 
 ## Liskov Substitution Principle (LSP)
 
@@ -210,7 +210,7 @@ class Square implements Shape {
 - Test substitutability by using base class references
 
 ### Real-World Analogy
-Think of vehicles: A motorcycle is a type of vehicle, but if you try to use it exactly like a car (expecting four seats), it breaks expectations. Just as vehicles have common behaviors (like moving) but specific implementations, classes should maintain expected behaviors while allowing for specialization.
+    Think of vehicles: A motorcycle is a type of vehicle, but if you try to use it exactly like a car (expecting four seats), it breaks expectations. Just as vehicles have common behaviors (like moving) but specific implementations, classes should maintain expected behaviors while allowing for specialization.
 ## Interface Segregation Principle (ISP)
 
 Clients should not be forced to depend on interfaces they do not use. This principle promotes creating small, focused interfaces rather than large, monolithic ones.
@@ -281,7 +281,7 @@ class RobotWorker implements Workable, Reportable {
 - Follow the "Interface Pollution" smell: too many methods in an interface suggests violation
 
 ### Real-World Analogy
-Think of a restaurant menu: Instead of having one massive menu with everything (breakfast, lunch, dinner, drinks, desserts), good restaurants often provide separate menus for different purposes. This makes it easier for customers to find what they need without being overwhelmed by irrelevant options.
+    Think of a restaurant menu: Instead of having one massive menu with everything (breakfast, lunch, dinner, drinks, desserts), good restaurants often provide separate menus for different purposes. This makes it easier for customers to find what they need without being overwhelmed by irrelevant options.
 
 ## Dependency Inversion Principle (DIP)
 
@@ -358,7 +358,7 @@ class NotificationService {
 - Keep abstractions stable and implementation details flexible
 
 ### Real-World Analogy
-Think of electrical outlets: They provide a standard interface (abstraction) that any compatible device can use. The outlet doesn't need to know about specific devices, and devices don't need to know about power generation - they both depend on the standard interface.
+    Think of electrical outlets: They provide a standard interface (abstraction) that any compatible device can use. The outlet doesn't need to know about specific devices, and devices don't need to know about power generation - they both depend on the standard interface.
 
 ### Common Implementation Strategies
 - Constructor injection
